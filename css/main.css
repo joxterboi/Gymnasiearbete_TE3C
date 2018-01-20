@@ -38,7 +38,8 @@
 .header ul li a {
 	color: var(--text-grey);
 	text-decoration: none;
-	padding: 0 17px;
+	padding: 15px 2px;
+	margin:0 15px;
 }
 #user {
 	float: right;
@@ -60,4 +61,8 @@
 	color: var(--pink);
 	cursor: pointer;
 	font-size: 15px;
+}
+#title {display: none}
+.active {
+	border-bottom: solid 4px var(--pink);
 }
