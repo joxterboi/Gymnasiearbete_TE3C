@@ -1,0 +1,26 @@
+*{margin:0;padding:0;border:0;font-family:roboto}h1{font-weight:500;font-size:25px;color:#414549}h2{font-weight:400;font-size:20px;color:#414549}p{font-weight:400;font-size:15px;color:#414549}:root{--green:#4CAF50;--pink:#FF4081}
+.header {
+	height: 122px;
+	width: 100%;
+	box-shadow: 0 3px 3px rgba(0,0,0,.3)
+}
+#logga {
+	width: 133px;
+	overflow-x: hidden;
+}
+#loggaUpper {
+	font-size: 45px;
+	font-weight: 500
+}
+#loggaUpper span {
+	color: var(--green)
+}
+#loggaUpper strong {
+	font-weight: 700;
+	font-size: 40px
+}
+#loggaLower {
+	font-size: 12px;
+	margin-top: -10px;
+	text-align: right;
+}
