@@ -1,4 +1,4 @@
-*{margin:0;padding:0;border:0;font-family:roboto}h1{font-weight:500;font-size:25px;color:#414549}h2{font-weight:400;font-size:20px;color:#414549}p{font-weight:400;font-size:15px;color:#414549}:root{--green:#4CAF50;--pink:#FF4081}
+*{margin:0;padding:0;border:0;font-family:roboto}h1{font-weight:500;font-size:25px;color:#414549}h2{font-weight:400;font-size:20px;color:var(--text-grey)}p{font-weight:400;font-size:15px;color:var(--text-grey)}:root{--green:#4CAF50;--pink:#FF4081;--text-grey}
 .header {
 	height: 122px;
 	width: 100%;
@@ -7,6 +7,8 @@
 #logga {
 	width: 133px;
 	overflow-x: hidden;
+	float: left;
+	margin: 28px 0 0 15%;
 }
 #loggaUpper {
 	font-size: 45px;
@@ -23,4 +25,39 @@
 	font-size: 12px;
 	margin-top: -10px;
 	text-align: right;
+}
+#menu {
+	width: 40%;
+	margin: 0 auto;
+}
+.header ul {
+	list-style-type: none;
+	text-align: center;
+	line-height: 122px;
+}
+.header ul li a {
+	color: var(--text-grey);
+	text-decoration: none;
+	padding: 0 17px;
+}
+#user {
+	float: right;
+	margin: -81px 15% 0 0;
+}
+#userLower {
+	font-size: 12px;
+	float: right;
+	margin-left: -61px;
+}
+.header button {
+	float: right;
+	margin-top: -18px;
+	margin-right: -104%;
+	border: 2px solid var(--pink);
+	border-radius: 200px;
+	padding: 5px 13px;
+	background-color: #fff;
+	color: var(--pink);
+	cursor: pointer;
+	font-size: 15px;
 }
