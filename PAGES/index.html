@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Logga in</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../SCRIPTS/logIn.js"></script>
 	<link rel="stylesheet" href="../CSS/logIn.css">
 	<link rel="stylesheet" href="../CSS/main.css">
 </head>
@@ -17,10 +19,10 @@
 		</div>
 		<br>
 		<div id="logInContainer">
-			<input type="text" placeholder="Andvändarnamn"><br>
-			<input type="password" placeholder="Lösenord"><br>
+			<input id="uid" type="text" placeholder="Andvändarnamn"><br>
+			<input id="pswrd" type="password" placeholder="Lösenord"><br>
 			<button>Glömt lösenord</button>
-			<button>Logga in</button>
+			<button onclick="logIn()">Logga in</button>
 		</div><br>
 		<button>Engelsk version</button>
 	</div>

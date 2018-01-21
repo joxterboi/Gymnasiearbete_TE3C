@@ -50,6 +50,9 @@
 	float: right;
 	margin-left: -61px;
 }
+button {
+	outline: none;
+}
 .header button {
 	float: right;
 	margin-top: -18px;

@@ -3,6 +3,10 @@ body {
 	background-position: center;
 	background-size: cover;
 }
+button {
+	outline: none;
+	cursor:pointer;
+}
 #square {
 	width: 38%;
 	height: 60vh;
@@ -38,10 +42,11 @@ body {
 	background-color: rgba(0,0,0,0);
 	color: #fff;
 	margin: 1px 0 50px 0;
-	padding: 0;
-	width: 100%;
+	padding: 0 5px;
+	width: calc(100% - 10px);
 	font-size: 20px;
 	font-weight: 300;
+	outline: none;
 }
 #square input::placeholder {
 	color: #fff;
