@@ -1,0 +1,85 @@
+body {
+	background-image: url(../IMAGES/logIn/loginBackdrop.jpg);
+	background-position: center;
+	background-size: cover;
+}
+#square {
+	width: 38%;
+	height: 60vh;
+	margin: 20vh auto 0 auto;
+	text-align: center;
+	border-radius: 35px;
+}
+#loggaLogin {
+	width: 255px;
+	text-align: right;
+	margin: 0 auto;
+	padding: 70px 0 60px 0;
+}
+#loggaLogin p{
+	font-size: 86px;
+	color: #fff;
+}
+#loggaLogin span {
+	color: var(--green);
+}
+#loggaLogin strong {
+	font-weight: 500;
+	font-size: 76px;
+}
+#loggaLogin #loggaLower {
+	font-size: 22px;
+	margin-top: -20px;
+}
+
+
+#square input {
+	border-bottom: 2px solid #fff;
+	background-color: rgba(0,0,0,0);
+	color: #fff;
+	margin: 1px 0 50px 0;
+	padding: 0;
+	width: 100%;
+	font-size: 20px;
+	font-weight: 300;
+}
+#square input::placeholder {
+	color: #fff;
+
+}
+
+#logInContainer {
+	width: 40%;
+	margin-left: 30%;
+}
+#logInContainer button {
+	float: right;
+	margin-left: 10px;
+	background-color: rgba(0,0,0,0);
+	color: #fff;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+
+#blurrySquare {
+	width: 38%;
+	height: 60vh;
+	top: 20vh;
+	left: 31%;
+	border-radius: 35px;
+	position: absolute;
+	filter: brightness(1.2);	
+	z-index: -2;
+	overflow: hidden;
+
+}
+#blur {
+	width: 100%;
+	height: 100%;
+	border-radius: 35px;
+	background-image: url(../IMAGES/logIn/loginBackdrop.jpg);
+	filter: blur(10px);
+	background-position: center -50.2vh;
+	background-size: 194.6vh;
+}
