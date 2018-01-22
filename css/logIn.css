@@ -7,6 +7,12 @@ button {
 	outline: none;
 	cursor:pointer;
 }
+#engVer {
+	background: none;
+	color:#fff;
+	font-weight: 300;
+	font-size: 22px;
+}
 #square {
 	width: 38%;
 	height: 60vh;
@@ -35,8 +41,6 @@ button {
 	font-size: 22px;
 	margin-top: -20px;
 }
-
-
 #square input {
 	border-bottom: 2px solid #fff;
 	background-color: rgba(255, 255, 255,0);
@@ -52,7 +56,6 @@ input::-webkit-input-placeholder {
 	color: #fff;
 	opacity: 0.8;
 }
-
 #logInContainer {
 	width: 40%;
 	margin-left: 30%;
@@ -65,7 +68,12 @@ input::-webkit-input-placeholder {
 	font-size: 20px;
 	font-weight: 300;
 }
-
+#wrongPswrd {
+	color: var(--pink);
+	font-size: 10px;
+	margin-top: -45px;
+	float: right;
+}
 
 #blurrySquare {
 	width: 38%;
