@@ -45,7 +45,11 @@
 	float: right;
 	margin: -81px 15% 0 0;
 }
+#userUpper {
+	float: right;
+}
 #userLower {
+	clear: both;
 	font-size: 12px;
 	float: right;
 	margin-left: -61px;

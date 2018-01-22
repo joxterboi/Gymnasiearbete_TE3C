@@ -25,7 +25,8 @@ $(document).ready(function() {
 		}
 	}
 	// Sets profile name to logged in user
-	var joakim kjellander = 3;
-	var currentUser = localStorage.getItem("uid");
-	$("#userUpper").text(currentUser + " TE3C");
+	var userDb = ["Joakim Kjellander Te3C", "Hektor Byfors Te3C", "Andreas Eriksson Te3C"]
+	var currentUserId = localStorage.getItem("uid");
+	var currentUser = userDb[currentUserId];
+	$("#userUpper").text(currentUser);
 });
