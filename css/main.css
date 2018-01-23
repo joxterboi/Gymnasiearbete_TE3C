@@ -73,3 +73,25 @@ button {
 .active {
 	border-bottom: solid 4px var(--pink);
 }
+
+/*Footer*/
+.footer {
+	width: 100vw;
+	height: 55px;
+	margin-top: 200px;
+	text-align: center;
+	box-shadow: 0 -3px 3px rgba(0,0,0,.3);
+	padding-top: 14px;
+	position: absolute;
+	bottom: 0;
+}
+#footerLinks a{
+	color: var(--pink);
+	text-decoration: none;
+	font-size: 14px;
+	margin: 0 7px;
+}
+.footer p {
+	font-size: 12px;
+	margin-top: 10px;
+}
