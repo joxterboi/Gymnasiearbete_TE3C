@@ -8,6 +8,21 @@ button {
 	cursor:pointer;
 
 }
+#rememberButton {
+	float: right;
+	margin-top: 15px;
+}
+#rememberButton button {
+	border-color: white;
+	margin-top: -18px;
+	margin-left: 20px;
+}
+#rememberButton p {
+	color: white;
+	margin-right: 25px;
+	font-size: 16px;
+    font-weight: 300;
+}
 #engVer {
 	background: none;
 	color:#fff;
