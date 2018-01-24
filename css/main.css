@@ -1,4 +1,18 @@
 *{margin:0;padding:0;border:0;font-family:roboto}h1{font-weight:500;font-size:25px;color:#414549}h2{font-weight:400;font-size:20px;color:var(--text-grey)}p{font-weight:400;font-size:15px;color:var(--text-grey)}:root{--green:#4CAF50;--pink:#FF4081;--text-grey}
+section {
+	width: 35%;
+	margin: 20px auto 0 auto;
+	overflow-y: scroll;
+	height: 62vh;
+}
+/*Scrollbar*/
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: var(--pink);
+	border-radius: 20px;
+}
 .header {
 	height: 122px;
 	width: 100%;
