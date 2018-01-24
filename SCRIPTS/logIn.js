@@ -31,17 +31,13 @@ function remember() {
 	var ifHere = localStorage.getItem("ifHere");
 	if (ifHere != "hasBeen") {
 		localStorage.setItem("ifHere", "hasBeen");
-	} else {
-		console.log("TRUE");
 	}
 
 	if (ifClicked = "false") {
 		localStorage.setItem("toggle", "true");
 		localStorage.setItem("rememberUid", user);
-		console.log("True");
 	} else {
 		localStorage.setItem("toggle", "false");
 		localStorage.setItem("rememberUid", "");
-		console.log("False");
 	}
 }
