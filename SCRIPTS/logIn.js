@@ -27,17 +27,26 @@ function checkt() {
 	}
 function remember() {	
 	var user = $("#uid").val();
-	var ifClicked = localStorage.getItem("toggle");
-	var ifHere = localStorage.getItem("ifHere");
-	if (ifHere != "hasBeen") {
-		localStorage.setItem("ifHere", "hasBeen");
-	}
+	var ifHere = localStorage.getItem("ifHere");	
 
-	if (ifClicked = "false") {
+	// if (ifHere != "hasBeen") {
+	// 	localStorage.setItem("ifHere", "hasBeen");
+	// 	localStorage.setItem("toggle", "true");
+	// }
+
+
+
+
+	var ifClicked = localStorage.getItem("toggle");
+	console.log(ifClicked);
+
+	if (ifClicked = "true") {
 		localStorage.setItem("toggle", "true");
 		localStorage.setItem("rememberUid", user);
+		console.log("HEJ");
 	} else {
 		localStorage.setItem("toggle", "false");
 		localStorage.setItem("rememberUid", "");
+		console.log("KYUS");
 	}
 }
