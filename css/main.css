@@ -3,7 +3,9 @@ section {
 	width: 35%;
 	margin: 20px auto 0 auto;
 	overflow-y: scroll;
-	height: 62vh;
+	height: calc(100vh - 211px);
+	overflow-x: hidden;
+	z-index: -4;
 }
 /*Scrollbar*/
 ::-webkit-scrollbar {
@@ -89,6 +91,9 @@ button {
 }
 
 /*Footer*/
+footer {
+	z-index: 99;
+}
 .footer {
 	width: 100vw;
 	height: 55px;
@@ -98,6 +103,7 @@ button {
 	padding-top: 14px;
 	position: absolute;
 	bottom: 0;
+	z-index: 99;
 }
 #footerLinks a{
 	color: var(--pink);
