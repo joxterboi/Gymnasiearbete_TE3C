@@ -1,3 +1,4 @@
+/*News feed home page*/
 #news h1 {
 	margin-bottom: -50px;
 }
@@ -12,4 +13,29 @@
 .news p {
 	border-bottom: solid 1px rgba(0,0,0,0.2);
 	padding-bottom: 30px;
+}
+/*Aktiva uppgifter*/
+#uppgifter h2 {
+	margin-top: 20px;
+}
+#uppgifter p {
+	margin-left: 40px;
+	margin-top: 10px;
+}
+.sub {
+	width: 95%;
+	margin-left: 2.5%;
+	padding-bottom: 30px;
+	border-bottom: solid 1px rgba(0,0,0,0.2);
+}
+#showAll {
+	float: right;
+	margin-top: -35px;
+}
+#showAll p {
+	font-size: 20px;
+}
+#showAll button {
+	margin-top: -21px;
+	margin-left: 120px;
 }

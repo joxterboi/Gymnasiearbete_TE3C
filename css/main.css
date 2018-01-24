@@ -1,11 +1,24 @@
-*{margin:0;padding:0;border:0;font-family:roboto}h1{font-weight:500;font-size:25px;color:#414549}h2{font-weight:400;font-size:20px;color:var(--text-grey)}p{font-weight:400;font-size:15px;color:var(--text-grey)}:root{--green:#4CAF50;--pink:#FF4081;--text-grey}
+*{margin:0;padding:0;border:0;font-family:roboto}h1{font-weight:500;font-size:25px;color:#414549}h2{font-weight:400;font-size:20px;color:var(--text-grey)}p{font-weight:400;font-size:15px;color:var(--text-grey)}:root{--green:#4CAF50;--pink:#FF4081;--text-grey:#414549;}
 section {
-	width: 35%;
+	width: 45%;
 	margin: 20px auto 0 auto;
 	overflow-y: scroll;
 	height: calc(100vh - 211px);
 	overflow-x: hidden;
 	z-index: -4;
+}
+/*Checkbox*/
+.checkbox {
+	width: 18px;
+	height: 18px;
+	border: 2px solid var(--text-grey);
+	background: none;
+	border-radius: 3px;
+	cursor:pointer;
+}
+.clicked {
+	background-color: var(--pink);
+	border-color: var(--pink);
 }
 /*Scrollbar*/
 ::-webkit-scrollbar {

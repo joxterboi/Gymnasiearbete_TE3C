@@ -29,4 +29,10 @@ $(document).ready(function() {
 	var currentUserId = localStorage.getItem("uid");
 	var currentUser = userDb[currentUserId];
 	$("#userUpper").text(currentUser);
+
+
 });
+	// Checkbox background change
+	function checkt() {
+		$(".checkbox").toggleClass("clicked");
+	}
