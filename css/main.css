@@ -17,8 +17,8 @@ section {
 	cursor:pointer;
 }
 .clicked {
-	background-color: var(--pink);
-	border-color: var(--pink);
+	background-color: var(--pink) !important;
+	border-color: var(--pink) !important;
 }
 /*Scrollbar*/
 ::-webkit-scrollbar {
