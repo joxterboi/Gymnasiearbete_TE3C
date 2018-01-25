@@ -1,4 +1,4 @@
-*{margin:0;padding:0;border:0;font-family:roboto}h1{font-weight:500;font-size:25px;color:#414549}h2{font-weight:400;font-size:20px;color:var(--text-grey)}p{font-weight:400;font-size:15px;color:var(--text-grey)}:root{--green:#4CAF50;--pink:#FF4081;--text-grey:#414549;}
+*{margin:0;padding:0;border:0;font-family:roboto}h1{font-weight:500;font-size:25px;color:#414549}h2{font-weight:400;font-size:20px;color:var(--text-grey)}h3{font-weight:500;font-size:25px;color:#414549;opacity:0.5;text-align:center}p{font-weight:400;font-size:15px;color:var(--text-grey)}:root{--green:#4CAF50;--pink:#FF4081;--text-grey:#414549;}
 section {
 	width: 45%;
 	margin: 20px auto 0 auto;
@@ -28,6 +28,24 @@ section {
 	background-color: var(--pink);
 	border-radius: 20px;
 }
+/*Floaring action button (fab)*/
+.fab {
+	width: 55px;
+	height: 55px;
+	background-color: var(--pink);
+	border-radius: 200px;
+	color: #fff;
+	font-size: 50px;
+	font-weight: 300;
+	position: absolute;
+	bottom: 160px;
+	left: calc(50% - 27.5px);
+	cursor: pointer;
+}
+.fab img {
+	width: 26px;
+}
+
 .header {
 	height: 122px;
 	width: 100%;
@@ -102,6 +120,41 @@ button {
 .active {
 	border-bottom: solid 4px var(--pink);
 }
+
+
+
+
+
+
+
+/*Under menues*/
+.underMenu {
+	margin: 0 auto 40px auto;
+}
+.underMenu ul {
+	list-style-type: none;
+	text-align: center;
+}
+.underMenu ul li button  {
+	color: var(--text-grey);
+	background: none;
+	font-size: 20px;
+	margin: 0 15px;
+	padding: 15px 2px;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Footer*/
 footer {
