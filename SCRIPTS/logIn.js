@@ -1,6 +1,15 @@
 $(document).ready(function() {
 	localStorage.setItem("access", "false");
 	$("#wrongPswrd").hide();
+	
+	//Sets remember me button state
+	var buttonState = localStorage.getItem("buttonState");
+	if (buttonState === "on") {
+		$("#uid").val(localStorage.getItem("rememberUid"));
+		checkt();
+	}
+	
+
 	function logIn() {
 		var uid = ["JOKJE001", "HEBYF001", "ANERI023"];
 		var pswrd = ["123", "456", "789"];
@@ -27,26 +36,24 @@ function checkt() {
 	}
 function remember() {	
 	var user = $("#uid").val();
-	var ifHere = localStorage.getItem("ifHere");	
-
-	// if (ifHere != "hasBeen") {
-	// 	localStorage.setItem("ifHere", "hasBeen");
-	// 	localStorage.setItem("toggle", "true");
-	// }
-
-
+	var ifHere = localStorage.getItem("ifHere");
+	if (ifHere != "hasBeen") {
+		localStorage.setItem("ifHere", "hasBeen");
+		localStorage.setItem("toggle", "true");
+	}
 
 
 	var ifClicked = localStorage.getItem("toggle");
-	console.log(ifClicked);
 
-	if (ifClicked = "true") {
+	if (ifClicked === "false") {
 		localStorage.setItem("toggle", "true");
 		localStorage.setItem("rememberUid", user);
-		console.log("HEJ");
+		localStorage.setItem("buttonState", "on");
+		console.log(localStorage.getItem("buttonState"));
 	} else {
 		localStorage.setItem("toggle", "false");
 		localStorage.setItem("rememberUid", "");
-		console.log("KYUS");
+		localStorage.setItem("buttonState", "off");
+		console.log(localStorage.getItem("buttonState"));
 	}
 }
