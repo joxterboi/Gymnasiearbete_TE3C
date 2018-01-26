@@ -30,6 +30,8 @@ $(document).ready(function() {
 	var currentUser = userDb[currentUserId];
 	$("#userUpper").text(currentUser);
 
+	// Hides frånvarorapport
+	$("#franvaroRapport").hide();
 
 });
 // Checkbox background change
@@ -40,4 +42,9 @@ function checkt() {
 $(".underMenu").find("button").click(function() {	
 	$(".underMenu").find("button").removeClass("active");
 	$(this).toggleClass("active");
+	var goTo = "#" + $(this).val();
+	$(".underMenuItems").children().hide();
+	$(goTo).show();
 });
+
+// Frånvaro meny
