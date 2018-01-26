@@ -9,7 +9,6 @@ $(document).ready(function() {
 		checkt();
 	}
 	
-
 	function logIn() {
 		var uid = ["JOKJE001", "HEBYF001", "ANERI023"];
 		var pswrd = ["123", "456", "789"];
@@ -31,6 +30,7 @@ $(document).ready(function() {
 		}
 	});
 });
+$("#logIn").click(logIn());
 function checkt() {
 		$(".checkbox").toggleClass("clicked");
 	}
