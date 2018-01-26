@@ -28,6 +28,10 @@ section {
 	background-color: var(--pink);
 	border-radius: 20px;
 }
+/*Place holder text*/
+input::-webkit-input-placeholder {
+	color: var(--text-grey)
+}
 /*Floaring action button (fab)*/
 .fab {
 	width: 55px;
@@ -103,17 +107,20 @@ section {
 	margin-left: -61px;
 	cursor: pointer;
 }
+input {
+	outline: none;
+}
 button {
 	outline: none;
+	color: var(--pink);
+	background: none;
+	font-size: 15px;
+	cursor: pointer;
 }
 .normalButton {
 	border: 2px solid var(--pink);
 	border-radius: 200px;
 	padding: 5px 13px;
-	background: none;
-	color: var(--pink);
-	cursor: pointer;
-	font-size: 15px;
 }
 .header button {
 	float: right;

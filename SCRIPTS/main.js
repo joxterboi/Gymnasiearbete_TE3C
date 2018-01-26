@@ -49,4 +49,6 @@ $(".underMenu").find("button").click(function() {
 });
 
 // Lägg till frånvaro
-$("#addAbsence").click().show($("#addAbsencePopUp"));
+$("#addAbsence").click(function(){
+	$("#addAbsencePopUp").show();
+})
