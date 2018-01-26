@@ -106,17 +106,19 @@ section {
 button {
 	outline: none;
 }
+.normalButton {
+	border: 2px solid var(--pink);
+	border-radius: 200px;
+	padding: 5px 13px;
+	background: none;
+	color: var(--pink);
+	cursor: pointer;
+	font-size: 15px;
+}
 .header button {
 	float: right;
 	margin-top: -18px;
 	margin-right: -104%;
-	border: 2px solid var(--pink);
-	border-radius: 200px;
-	padding: 5px 13px;
-	background-color: #fff;
-	color: var(--pink);
-	cursor: pointer;
-	font-size: 15px;
 }
 #title {display: none}
 .active {
