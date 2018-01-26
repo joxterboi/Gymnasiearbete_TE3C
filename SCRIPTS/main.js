@@ -34,6 +34,12 @@ $(document).ready(function() {
 	$(".underMenuItems").children().hide();
 	$(".underMenuItems div:first-child").show();
 
+	// kollar anmäldfrånvaro
+	var prevAbsence = localStorage.getItem("prevAbsence");
+	if (prevAbsence != "true") {
+		localStorage.setItem("prevAbsence", "true");
+		localStorage.setItem("absenceAmount", 0);
+	}
 });
 // Checkbox background change
 function checkt() {
@@ -52,3 +58,16 @@ $(".underMenu").find("button").click(function() {
 $("#addAbsence").click(function(){
 	$("#addAbsencePopUp").show();
 })
+// Sparar frånvaron
+function saveAbsence() {
+	var absenceAmount = parseInt(localStorage.getItem("absenceAmount"));
+	absenceAmount += 1;
+	localStorage.setItem("absenceAmount", absenceAmount);
+	localStorage.setItem("startTime", $("#startTime").val());
+	localStorage.setItem("stopTime", $("#stopTime").val());
+	localStorage.setItem("date", $("#date").val());
+}
+// Tar bort frånvarorutan
+function cancelAbsence() {
+	$("#addAbsencePopUp").hide();
+}
