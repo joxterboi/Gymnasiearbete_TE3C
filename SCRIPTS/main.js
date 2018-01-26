@@ -31,7 +31,8 @@ $(document).ready(function() {
 	$("#userUpper").text(currentUser);
 
 	// Hides frånvarorapport
-	$("#franvaroRapport").hide();
+	$(".underMenuItems").children().hide();
+	$(".underMenuItems div:first-child").show();
 
 });
 // Checkbox background change
@@ -47,4 +48,5 @@ $(".underMenu").find("button").click(function() {
 	$(goTo).show();
 });
 
-// Frånvaro meny
+// Lägg till frånvaro
+$("#addAbsence").click().show($("#addAbsencePopUp"));
