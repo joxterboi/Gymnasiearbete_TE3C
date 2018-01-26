@@ -32,7 +32,12 @@ $(document).ready(function() {
 
 
 });
-	// Checkbox background change
-	function checkt() {
-		$(".checkbox").toggleClass("clicked");
-	}
+// Checkbox background change
+function checkt() {
+	$(".checkbox").toggleClass("clicked");
+}
+// Undermeny
+$(".underMenu").find("button").click(function() {	
+	$(".underMenu").find("button").removeClass("active");
+	$(this).toggleClass("active");
+});
