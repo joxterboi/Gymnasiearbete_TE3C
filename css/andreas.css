@@ -1,4 +1,4 @@
-.kontaktLista {
+#kontaktLista {
 	display: inline-grid;
   grid-template-columns: 40% 40%;
   grid-template-rows: 20px;
