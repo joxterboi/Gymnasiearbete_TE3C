@@ -73,6 +73,7 @@
 	text-align: center;
 	padding: 20px 0 50px 0;
 	margin:0 auto;
+	z-index: 22;
 }
 #addAbsencePopUp h2 {
 	margin-top: 20px;
@@ -99,4 +100,7 @@
 }
 #addAbsencePopUp button:first-child {
 	margin-right: 10px;
+}
+#absenceCards {
+	z-index: -5;
 }
