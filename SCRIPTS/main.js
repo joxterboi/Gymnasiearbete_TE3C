@@ -41,6 +41,7 @@ $(document).ready(function() {
 		localStorage.setItem("absenceAmount", 0);
 	}
 	// View repported absence
+	startTime = JSON.parse(localStorage.getItem('startTime') || "[]");
 });
 // Checkbox background change
 function checkt() {
