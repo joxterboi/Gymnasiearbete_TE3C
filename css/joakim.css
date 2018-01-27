@@ -77,6 +77,8 @@
 }
 #addAbsencePopUp h2 {
 	margin-top: 20px;
+	z-index: -1;
+	position: relative;
 }
 #addAbsencePopUp #container {
 	width: 300px;
@@ -102,5 +104,24 @@
 	margin-right: 10px;
 }
 #absenceCards {
-	z-index: -5;
+	z-index: 1;
+	position: relative;
+}
+.absenceCard {
+	width: 70%;
+	margin-left: 15%;
+	margin-bottom: 20px;
+	text-align: center;
+	padding: 15px 0;
+	background-color: #fff;
+}
+.absenceCard:first-child {
+	margin-top: -45px;
+}
+.absenceCard h1 {
+	font-weight: 400;
+	font-size: 20px;
+}
+.absenceCard span {
+	color: var(--pink);
 }

@@ -41,7 +41,7 @@ $(document).ready(function() {
 		localStorage.setItem("absenceAmount", 0);
 	}
 	// View repported absence
-	startTime = JSON.parse(localStorage.getItem('startTime') || "[]");
+	showAbsence()
 });
 // Checkbox background change
 function checkt() {
@@ -82,20 +82,14 @@ function cancelAbsence() {
 	$("#addAbsencePopUp").hide();
 }
 // View repported absence
-// function showAbsence() {	
-// 	$("#absenceCards").each(function(){
-// 		startTime = JSON.parse(localStorage.getItem('startTime') || "[]");
-// 		$(this).text(startTime[Math.floor(Math.random()*startTime.length)]);
-// 	});
-// }
 function showAbsence() {
 	$("#absenceCards").text("");
 	startTime = JSON.parse(localStorage.getItem('startTime'));
 	for (i = 0; i < startTime.length; i++) {
-	  $('<div class="absenceCard" />').html(
-	  	"<h1>" + startTime[i] + "</h1>" + 
-	  	"<h1>" + startTime[i] + "</h1>" + 
-	  	"<h1>" + startTime[i] + "</h1>"
+	  $('<div class="absenceCard card" />').html(
+	  	"<h1>" + "Från: " + "<span>" + startTime[i] + "</span>" + "</h1>" + 
+	  	"<h1>" + "Till: " + "<span>" + startTime[i] + "</span>" + "</h1>" + 
+	  	"<h1>" + "Datum: " + "<span>" + startTime[i] + "</span>" + "</h1>"
 	  	).appendTo('#absenceCards');
 	}
 }
