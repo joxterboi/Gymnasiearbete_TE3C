@@ -40,6 +40,11 @@ $(document).ready(function() {
 		localStorage.setItem("prevAbsence", "true");
 		localStorage.setItem("absenceAmount", 0);
 	}
+	// View repported absence
+	$("#absenceCards").each(function(){
+		startTime = JSON.parse(localStorage.getItem('startTime') || "[]");
+		$(this).text(startTime[Math.floor(Math.random()*startTime.length)]);
+	});
 });
 // Checkbox background change
 function checkt() {
@@ -59,13 +64,20 @@ $("#addAbsence").click(function(){
 	$("#addAbsencePopUp").show();
 })
 // Sparar frånvaron
-function saveAbsence() {
-	var absenceAmount = parseInt(localStorage.getItem("absenceAmount"));
-	absenceAmount += 1;
-	localStorage.setItem("absenceAmount", absenceAmount);
-	localStorage.setItem("startTime", $("#startTime").val());
-	localStorage.setItem("stopTime", $("#stopTime").val());
-	localStorage.setItem("date", $("#date").val());
+startTime = JSON.parse(localStorage.getItem('startTime') || "[]");
+
+var saveAbsence = function () {
+  var absence = $("#startTime").val();
+  if (absence != "") {  	
+	  startTime.push(absence);
+	  localStorage.setItem('startTime', JSON.stringify(startTime));
+	  $("#startTime").val("");
+	  cancelAbsence();
+  }
+}
+function rensa() {
+	localStorage.setItem('startTime', "[]");
+	location.reload();
 }
 // Tar bort frånvarorutan
 function cancelAbsence() {

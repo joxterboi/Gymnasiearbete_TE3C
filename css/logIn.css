@@ -71,8 +71,8 @@ button {
 	outline: none;
 }
 input::-webkit-input-placeholder {
-	color: #fff;
-	opacity: 0.8;
+	color: #fff !important;
+	opacity: 0.8 !important;
 }
 #logInContainer {
 	width: 45%;
