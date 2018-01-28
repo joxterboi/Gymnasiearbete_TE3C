@@ -43,6 +43,10 @@ $(document).ready(function() {
 	// View repported absence
 	showAbsence()
 });
+// Checkbox hektor
+$("#kurser").find("button").click(function(){
+	$(this).toggleClass("greenCheck");
+})
 // Checkbox background change
 function checkt() {
 	$(".checkbox").toggleClass("clicked");
