@@ -1,30 +1,24 @@
-
 /*Dina lärare kontakt info*/
 #dinaListor {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 }
-
 #dinaListor p {
 	margin-top: 10px;
 }
-
 #dinaNamn {
   	width: 200px;
   	height: auto;
 }
-
 #dinaMail {
 	width: 250px;
 	height: auto;
 }
-
 #dinaNummer {
 	width: auto;
 	height: auto;
 }
-
 /*Övrig personal kontakt info*/
 #ovrigaListor {
 	display: flex;
@@ -35,21 +29,15 @@
 #ovrigaListor p {
 	margin-top: 10px;
 }
-
 #ovrigNamn {
 	width: 200px;
 	height: auto;
 }
-
 #ovrigMail {
 	width: 250px;
 	height: auto;
 }
-
 #ovrigNummer {
 	width: auto;
 	height: auto;
 }
-
-
-
