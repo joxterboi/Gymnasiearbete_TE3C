@@ -44,7 +44,9 @@ $(document).ready(function() {
 	showAbsence()
 });
 // Checkbox hektor
-$("#kurser").find("button")
+$("#kurser").find("button").click(function(){
+	$(this).toggleClass("greenCheck");
+})
 // Checkbox background change
 function checkt() {
 	$(".checkbox").toggleClass("clicked");
