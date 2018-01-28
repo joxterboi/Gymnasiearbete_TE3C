@@ -37,6 +37,9 @@
 	width: 250px;
 	height: auto;
 }
+#ovrigMail p:last-child {
+	margin-bottom: 20px;
+}
 #ovrigNummer {
 	width: auto;
 	height: auto;
