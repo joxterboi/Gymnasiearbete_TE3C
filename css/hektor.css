@@ -2,8 +2,41 @@
 	margin-left: 40px;
 	margin-top: 10px;
 }
-
+/*rutorna kan inte klickas i och fungerar inte med kortet som ska poppa fram*/
 #kurser button {
 	margin-left: 300px;
 	margin-top: -20px;
 }
+#kurser #container {
+	position: absolute;
+	right: 450px;
+	top: 185px;
+	overflow-y: scroll;
+}
+#kurser #container .card {
+	width: 400px;
+	float: right;
+	margin-right: 3px;
+	padding: 20px;
+	clear: both;
+	margin-bottom: 30px;
+	margin-top: 2px;
+	margin-left: 2px;
+	overflow-x: hidden;
+}
+#kurser #container .card h1 {
+	color: var(--green);
+	text-align: center;
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
+#kurser #container .card p {
+
+}
+.data {
+	margin-left: 130px;
+	margin-top: -18px;
+	margin-bottom: 10px;
+}
+
+.greenCheck
