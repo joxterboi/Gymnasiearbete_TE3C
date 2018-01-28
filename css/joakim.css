@@ -18,6 +18,18 @@
 #uppgifter h2 {
 	margin-top: 20px;
 }
+/*h4 tag is for status messages*/
+#uppgifter h4, #uppgifter h5 {
+	font-weight:400;
+	font-size:15px;
+	color:var(--text-grey);
+	float: right;
+	margin: -18px 40px 0 0;
+}
+/*h5 för uppgifter som ej är inlämmnade*/
+#uppgifter h5 {
+	cursor: pointer;
+}
 #uppgifter p {
 	margin-left: 40px;
 	margin-top: 10px;
@@ -41,7 +53,7 @@
 }
 /*Frånvaro*/
 #franvaroRapport #container {
-	width: 45%;
+	width: 270px;
 	margin:0 auto;
 }
 #franvaroRapport h2 {
@@ -67,6 +79,13 @@
 	margin-top: 13px;
 	margin-right: -33px;
 }
+/*Detaljerad frånvarorapport*/
+#detFranvaroRapport #container div {
+	border-bottom: 1px solid var(--text-grey);
+	
+}
+
+
 /*Lägg till frånvaro*/
 #addAbsencePopUp {
 	width: 500px;
@@ -111,8 +130,8 @@
 	position: relative;
 }
 .absenceCard {
-	width: 70%;
-	margin-left: 15%;
+	width: 400px;
+	margin-left: calc(50% - 200px);
 	margin-bottom: 20px;
 	text-align: center;
 	padding: 15px 0;

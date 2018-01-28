@@ -113,3 +113,8 @@ function showAbsence() {
 	  	).appendTo('#absenceCards');
 	}
 }
+
+// Lämmna in uppgifter
+$("h5").click(function() {
+	location.href="lammnaIn.html"
+});

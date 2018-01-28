@@ -19,8 +19,14 @@ section {
 	background: none;
 	border-radius: 3px;
 	cursor:pointer;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #fff;
+	transition: border-color 0.4s ease-out;
+	background-opacity: 0.5
 }
 .clicked {
+	background-image: url(../IMAGES/logIn/checkmark.svg);
 	background-color: var(--pink) !important;
 	border-color: var(--pink) !important;
 }
