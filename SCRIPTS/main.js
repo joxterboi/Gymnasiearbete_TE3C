@@ -35,7 +35,6 @@ $(document).ready(function() {
 	// Looks for url to go to msg directly
 	var hash = (window.location.hash).replace("#","");
 	if (hash == "meddelanden") {
-		console.log(hash);
 		$(".underMenuItems").children().hide();
 		$("#meddelanden").show();
 		$('button[value="meddelanden"]').addClass("active");
