@@ -40,8 +40,6 @@ $(document).ready(function() {
 		$("#meddelanden").show();
 		$('button[value="meddelanden"]').addClass("active");
 		$('button[value="dinaLarare"]').removeClass("active");
-	} else {
-		console.log("JYS " + hash);
 	}
 	// Hides klara uppgifter
 	$(".done").hide();
