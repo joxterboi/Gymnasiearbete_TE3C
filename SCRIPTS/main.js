@@ -32,7 +32,6 @@ $(document).ready(function() {
 	// Hides frånvarorapport
 	$(".underMenuItems").children().hide();
 	$(".underMenuItems div:first-child").show();
-
 	// Looks for url to go to msg directly
 	var hash = (window.location.hash);
 	if (hash == "#meddelanden") {
@@ -41,6 +40,8 @@ $(document).ready(function() {
 		$('button[value="meddelanden"]').addClass("active");
 		$('button[value="dinaLarare"]').removeClass("active");
 	}
+	// Hides klara uppgifter
+	$(".done").hide();
 	// kollar anmäldfrånvaro
 	var prevAbsence = localStorage.getItem("prevAbsence");
 	if (prevAbsence != "true") {
@@ -144,3 +145,9 @@ function showAbsence() {
 $("h5").click(function() {
 	location.href="lammnaIn.html"
 });
+// Visar alla uppgifter
+$(".chkUppgift").click(function() {
+	$("h4[class='done']").text("Klar");
+	$("h4[class='done']").css("color", "var(--green)");
+	$(".done").toggle();
+})
