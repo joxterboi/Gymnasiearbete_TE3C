@@ -29,11 +29,18 @@ $(document).ready(function() {
 	var currentUserId = localStorage.getItem("uid");
 	var currentUser = userDb[currentUserId];
 	$("#userUpper").text(currentUser);
-
 	// Hides frånvarorapport
 	$(".underMenuItems").children().hide();
 	$(".underMenuItems div:first-child").show();
 
+	// Looks for url to go to msg directly
+	var hash = (window.location.hash);
+	if (hash == "#meddelanden") {
+		$(".underMenuItems").children().hide();
+		$("#meddelanden").show();
+		$('button[value="meddelanden"]').addClass("active");
+		$('button[value="dinaLarare"]').removeClass("active");
+	}
 	// kollar anmäldfrånvaro
 	var prevAbsence = localStorage.getItem("prevAbsence");
 	if (prevAbsence != "true") {
@@ -45,6 +52,14 @@ $(document).ready(function() {
 	// Hides all kureser cards
 	$("#kurser").children("#container").children(".card").hide();
 });
+// Link to messages in footer
+function msgLink(){
+	console.log("KYS");
+	location.href=("kontakt.html");
+	$(".underMenuItems").children().hide();
+	$("#meddelanden").show();
+
+};
 // Checkbox hektor
 $("#kurser").find("button").click(function(){
 	$(this).toggleClass("greenCheck");
