@@ -34,11 +34,14 @@ $(document).ready(function() {
 	$(".underMenuItems div:first-child").show();
 	// Looks for url to go to msg directly
 	var hash = (window.location.hash).replace("#","");
-	if (hash == "#meddelanden") {
+	if (hash == "meddelanden") {
+		console.log(hash);
 		$(".underMenuItems").children().hide();
 		$("#meddelanden").show();
 		$('button[value="meddelanden"]').addClass("active");
 		$('button[value="dinaLarare"]').removeClass("active");
+	} else {
+		console.log("JYS " + hash);
 	}
 	// Hides klara uppgifter
 	$(".done").hide();
@@ -146,7 +149,7 @@ function showAbsence() {
 
 // Lämmna in uppgifter
 $("h5").click(function() {
-	// var hash = $(this).prev().text();
+	var hash = $(this).prev().text();
 	var hash = $(this).parent().find("h2").text() + " - " + $(this).prev().text();
 	location.href="lammnaIn.html#" + hash;
 });
