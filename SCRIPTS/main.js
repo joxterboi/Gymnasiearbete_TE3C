@@ -41,11 +41,18 @@ $(document).ready(function() {
 		localStorage.setItem("absenceAmount", 0);
 	}
 	// View repported absence
-	showAbsence()
+	showAbsence();
+	// Hides all kureser cards
+	$("#kurser").children("#container").children(".card").hide();
 });
 // Checkbox hektor
 $("#kurser").find("button").click(function(){
 	$(this).toggleClass("greenCheck");
+	var activeCard = "#" + $(this).prev().text();
+	activeCard = activeCard.replace(/\s/g,"");
+	activeCard = activeCard.replace(/ä/g, '');
+	console.log(activeCard);
+	$(activeCard).toggle();
 })
 // Checkbox background change
 function checkt() {

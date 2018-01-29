@@ -14,12 +14,13 @@
 	position: absolute;
 	left: 26vw;
 	top: 20px;
+	height: calc(100vh - 231px);
 	overflow-y: scroll;
 }
 #kurser #container .card {
 	width: 400px;
 	float: right;
-	margin-right: 3px;
+	margin-right: 10px;
 	padding: 20px;
 	clear: both;
 	margin-bottom: 30px;
