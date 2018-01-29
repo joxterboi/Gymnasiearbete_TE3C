@@ -33,7 +33,7 @@ $(document).ready(function() {
 	$(".underMenuItems").children().hide();
 	$(".underMenuItems div:first-child").show();
 	// Looks for url to go to msg directly
-	var hash = (window.location.hash);
+	var hash = (window.location.hash).replace("#","");
 	if (hash == "#meddelanden") {
 		$(".underMenuItems").children().hide();
 		$("#meddelanden").show();
@@ -48,6 +48,9 @@ $(document).ready(function() {
 		localStorage.setItem("prevAbsence", "true");
 		localStorage.setItem("absenceAmount", 0);
 	}
+	// Lämmna in en uppgift title och uppgift
+	var lammnaInTitle = (window.location.hash).replace("#", "");	
+	$("#lammnaInTitle").text(lammnaInTitle);
 	// View repported absence
 	showAbsence();
 	// Hides all kureser cards
@@ -143,11 +146,13 @@ function showAbsence() {
 
 // Lämmna in uppgifter
 $("h5").click(function() {
-	location.href="lammnaIn.html"
+	// var hash = $(this).prev().text();
+	var hash = $(this).parent().find("h2").text() + " - " + $(this).prev().text();
+	location.href="lammnaIn.html#" + hash;
 });
 // Visar alla uppgifter
 $(".chkUppgift").click(function() {
 	$("h4[class='done']").text("Klar");
 	$("h4[class='done']").css("color", "var(--green)");
 	$(".done").toggle();
-})
+});
