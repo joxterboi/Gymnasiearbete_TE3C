@@ -1,16 +1,19 @@
+#kurser {
+	position: absolute;
+	left: 29vw;
+}
 #kurser h2 {
 	margin-left: 40px;
 	margin-top: 10px;
 }
-/*rutorna kan inte klickas i och fungerar inte med kortet som ska poppa fram*/
 #kurser button {
 	margin-left: 300px;
 	margin-top: -20px;
 }
 #kurser #container {
 	position: absolute;
-	right: 450px;
-	top: 185px;
+	left: 26vw;
+	top: 20px;
 	overflow-y: scroll;
 }
 #kurser #container .card {
@@ -23,20 +26,41 @@
 	margin-top: 2px;
 	margin-left: 2px;
 	overflow-x: hidden;
+	height: 120px;
 }
 #kurser #container .card h1 {
 	color: var(--green);
 	text-align: center;
-	margin-top: -10px;
-	margin-bottom: 10px;
+	margin-top: -5px;
+	margin-bottom: 15px;
 }
-#kurser #container .card p {
-
+#kurser #container .card #data #left {
+	width: 50%;
+	position: absolute;
+	height: 80px;
+	left: 0;
 }
-.data {
-	margin-left: 130px;
-	margin-top: -18px;
-	margin-bottom: 10px;
+#kurser #container .card #data #left p {
+	float: right;
+	clear: both;
+	margin-right: 5px;
+	text-align: left;
+	margin-bottom: 4px;
 }
-
-.greenCheck
+#kurser #container .card #data #right {
+	width: 50%;
+	position: absolute;
+	left: 50%;
+	height: 80px;
+}
+#kurser #container .card #data #right p {
+	float: left;
+	clear: both;
+	margin-left: 5px;
+	margin-bottom: 4px;
+}
+.greenCheck {
+	background-image: url(../IMAGES/logIn/checkmark.svg);
+	background-color: var(--green);
+	border-color: var(--green);
+}
