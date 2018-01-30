@@ -1,5 +1,9 @@
 $(document).ready(function() {
-
+	favicon = document.createElement('link');
+    favicon.setAttribute('rel', 'shortcut icon');
+    var head = document.querySelector('head');
+    head.appendChild(favicon);
+	$('link[rel="shortcut icon"]').attr('href', "../IMAGES/icons/aKlass.png")
 	// Checks user has actually logged in
 	var access = localStorage.getItem("access");
 	if (access == "true") {
