@@ -32,6 +32,18 @@ $(document).ready(function() {
 	// Hides frånvarorapport
 	$(".underMenuItems").children().hide();
 	$(".underMenuItems div:first-child").show();
+	// Displas msg number
+	var msgNumber = JSON.parse(localStorage.getItem("msgNumber"));
+	if (msgNumber != 0)  {
+		if (msgNumber > 0) {
+			$("#msgNumber").text(msgNumber);
+		} else {
+			localStorage.setItem("msgNumber", 0);
+			$("#msgNumber").hide();
+		}
+	} else {
+			$("#msgNumber").hide();
+		}
 	// Looks for url to go to msg directly
 	var hash = (window.location.hash).replace("#","");
 	if (hash == "meddelanden") {
@@ -56,14 +68,6 @@ $(document).ready(function() {
 	// Hides all kureser cards
 	$("#kurser").children("#container").children(".card").hide();
 });
-// Link to messages in footer
-function msgLink(){
-	console.log("KYS");
-	location.href=("kontakt.html");
-	$(".underMenuItems").children().hide();
-	$("#meddelanden").show();
-
-};
 // Checkbox hektor
 $("#kurser").find("button").click(function(){
 	$(this).toggleClass("greenCheck");
@@ -72,7 +76,7 @@ $("#kurser").find("button").click(function(){
 	activeCard = activeCard.replace(/ä/g, '');
 	console.log(activeCard);
 	$(activeCard).toggle();
-})
+});
 // Checkbox background change
 function checkt() {
 	$(".checkbox").toggleClass("clicked");
@@ -156,3 +160,10 @@ $(".chkUppgift").click(function() {
 	$("h4[class='done']").css("color", "var(--green)");
 	$(".done").toggle();
 });
+
+// Look at MSG
+function notis() {
+	localStorage.setItem("msgNumber", 0);
+	location.href=("kontakt.html#meddelanden");
+	$("#msgNumber").hide();
+}
