@@ -65,19 +65,18 @@ $(document).ready(function() {
 		localStorage.setItem("absenceAmount", 0);
 	}
 	// Lämmna in en uppgift title och uppgift
-	var lammnaInTitle = (window.location.hash).replace("#", "");	
+	var lammnaInTitle = (window.location.hash).replace("#", "").replace("%C3%A4", "ä");
 	$("#lammnaInTitle").text(lammnaInTitle);
 	// View repported absence
 	showAbsence();
 	// Hides all kureser cards
 	$("#kurser").children("#container").children(".card").hide();
 });
-// Checkbox hektor
 $("#kurser").find("button").click(function(){
 	$(this).toggleClass("greenCheck");
 	var activeCard = "#" + $(this).prev().text();
+	activeCard = activeCard.replace(/ä/g, "");
 	activeCard = activeCard.replace(/\s/g,"");
-	activeCard = activeCard.replace(/ä/g, '');
 	console.log(activeCard);
 	$(activeCard).toggle();
 });
@@ -155,8 +154,8 @@ function showAbsence() {
 // Lämmna in uppgifter
 $("h5").click(function() {
 	var hash = $(this).prev().text();
-	var hash = $(this).parent().find("h2").text() + " - " + $(this).prev().text();
-	location.href="lammnaIn.html#" + hash;
+	hash = $(this).parent().find("h2").text() + " - " + $(this).prev().text();
+	location.href="lammnaIn.html#" +  hash;
 });
 // Visar alla uppgifter
 $(".chkUppgift").click(function() {
