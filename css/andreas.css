@@ -7,6 +7,10 @@
 #dinaListor p {
 	margin-top: 10px;
 }
+#dinaSubject {
+  	width: auto;
+  	height: auto;
+}
 #dinaNamn {
   	width: 200px;
   	height: auto;
