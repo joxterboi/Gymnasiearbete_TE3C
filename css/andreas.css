@@ -68,11 +68,15 @@
 }
 #textInput {
 	margin: 25px  0 -6px;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid var(--text-grey);
 	padding-bottom:1px;
 }
 #textBox {
 	margin-top: 5%;
+	border-bottom: 1px solid var(--text-grey);
+}
+#textBox textarea {
+	resize: none
 }
 #skickaKnapp {
 	float: right;
