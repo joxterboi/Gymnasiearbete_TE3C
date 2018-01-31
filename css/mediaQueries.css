@@ -1,0 +1,24 @@
+@media only screen and (max-width: 1400px) {
+    #kontaktSection {
+        width: 80%;
+        margin-left: 10%;
+    }
+    #square, #blurrySquare {
+    	height: 550px;
+    	width: 600px;
+    }
+    #square {
+    	margin-top: 5vh;
+    }
+    #blurrySquare {
+    	top:5vh;
+    	left: calc(50% - 300px);
+    }
+    #loggaLogin {
+    	padding-top: 40px;
+    	padding-bottom: 20px;
+    }
+    #engVer {
+    	margin-top:90px !important;
+    }
+}
