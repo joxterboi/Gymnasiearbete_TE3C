@@ -6,12 +6,10 @@ $(document).ready(function() {
 	$('link[rel="shortcut icon"]').attr('href', "../IMAGES/icons/favicon.png")
 	// Checks user has actually logged in
 	var access = localStorage.getItem("access");
-	if (access == "true") {
-		
+	if (access == "true") {	
 	} else {
 		window.location.replace("index.html");
 	}
-
 	// Loggin out script
 	function logOut() {
 		localStorage.setItem("access", "false");
@@ -33,6 +31,9 @@ $(document).ready(function() {
 	var currentUserId = localStorage.getItem("uid");
 	var currentUser = userDb[currentUserId];
 	$("#userUpper").text(currentUser);
+	//Sätter rätt title på svara på msg
+	var msgTitle = (window.location.hash).replace("#", "").replace("%C3%A4", "ä").replace("%C3%B6", "ö");
+	$("#writeMsg").find("h1").text("Svara på " + '"' + msgTitle + '"');
 	// Hides frånvarorapport
 	$(".underMenuItems").children().hide();
 	$(".underMenuItems div:first-child").show();
@@ -47,7 +48,7 @@ $(document).ready(function() {
 		}
 	} else {
 			$("#msgNumber").hide();
-		}
+	}
 	// Looks for url to go to msg directly
 	var hash = (window.location.hash).replace("#","");
 	if (hash == "meddelanden") {
@@ -72,6 +73,14 @@ $(document).ready(function() {
 	// Hides all kureser cards
 	$("#kurser").children("#container").children(".card").hide();
 });
+// Avbryter svara på msg, skickas tillbaka
+$("#msgButtons").find("#avbrytKnapp").click(function(){
+	location.href = "kontakt.html#meddelanden";
+});
+//Svara på medelande
+$(".answerButton").click(function() {
+	location.href = "svaraMsg.html#" + $(this).parent().find("h2").text();
+});
 //Visar namn på vald fil
 $("#file").change(function(){
 	var fileName = $("#file").val().substring(12);
@@ -84,7 +93,6 @@ $("#lammnaIn").find("button").click(function(){
 	alert("Du har lämmnat in " + '"' + fileName + '"' + " i uppgiften " + '"' + lammnaInTitle + '"');
 	location.href = "uppgifter.html";
 });
-
 $("#kurser").find("button").click(function(){
 	$(this).toggleClass("greenCheck");
 	var activeCard = "#" + $(this).prev().text();
@@ -163,7 +171,6 @@ function showAbsence() {
 	  	).appendTo('#absenceCards');
 	}
 }
-
 // Lämmna in uppgifter
 $("h5").click(function() {
 	var hash = $(this).prev().text();
@@ -176,10 +183,18 @@ $(".chkUppgift").click(function() {
 	$("h4[class='done']").css("color", "var(--green)");
 	$(".done").toggle();
 });
-
 // Look at MSG
 function notis() {
 	localStorage.setItem("msgNumber", 0);
 	location.href=("kontakt.html#meddelanden");
 	$("#msgNumber").hide();
-}
+};
+//"Sends" msg
+$("#msgButtons").find("#skickaKnapp").click(function(){
+	if ($("#msgTitle").val() != "" && $("#scaleText").val() != ""){
+		alert("Ditt medelande har skickats.");
+		location.href = "kontakt.html#meddelanden";
+	}else {
+		alert("Se till att du har fyllt i båda fälten.");
+	}
+});

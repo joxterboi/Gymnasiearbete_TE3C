@@ -1,23 +1,24 @@
 <meta charset="UTF-8">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
 <script type="text/javascript" src="../SCRIPTS/load.js"></script>
-<div id="title"></div>
+<div id="title">Svara på medelande</div>
 <header></header>
 <section>
-	<div id="svaraMsg">
-		<h1>Svara på: Högskoleprovet - SYV</h1>
-		<div id="textInput">
-			Titel: <input type="text" name="title">
+	<div id="writeMsg">
+		<h1>Svara på "Högskoleprovet - SYV"</h1>
+		<div id="writeMsg">
+			<input placeholder="Title" type="text" name="title" id="msgTitle"><br>
+			<textarea rows="1" placeholder="Skriv meddelande här" id="scaleText"></textarea>
 		</div>
-		<div id="textBox">
-			<textarea cols="50" rows="5" placeholder="Skriv meddelande här"></textarea>
-		</div>
-		<div id="skickaKnapp"> 
-			<button class="normalButton">Skicka</button>
-		</div>
-		<div id="avbrytKnapp">
-			<button>Avbryt</button>
+		<div id="msgButtons">
+			<button id="avbrytKnapp">Avbryt</button>
+			<button class="normalButton" id="skickaKnapp">Skicka</button>
 		</div>
 	</div>
 </section>
+	<script>
+		autosize(document.getElementById("scaleText"));
+		$("#scaleText").css("height", "32px");
+	</script>
 <footer></footer>

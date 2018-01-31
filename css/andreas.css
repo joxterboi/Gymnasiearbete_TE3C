@@ -60,29 +60,39 @@
 	margin-right: 20px;
 	text-decoration: none;
 	color: var(--pink);
+	cursor: pointer;
 }
 /*Svara sidan*/
-#svaraMsg {
-	width: 360px;
-	margin: 50px auto;
+#writeMsg {
+	width: 600px;
+	margin-left: calc(50% - 300px);
+	text-align: center;
 }
-#textInput {
-	margin: 25px  0 -6px;
+#writeMsg h1 {
+	margin-bottom: 25px;
+}
+#writeMsg input, #writeMsg textarea {
 	border-bottom: 1px solid var(--text-grey);
-	padding-bottom:1px;
+	margin: 5px auto;
+	width: 350px;
+	padding: 3px !important;
+	margin-bottom: 10px;
+	font-size: 20px;
 }
-#textBox {
-	margin-top: 5%;
-	border-bottom: 1px solid var(--text-grey);
+#writeMsg input::placeholder, #writeMsg textarea::placeholder {
+	font-size: 20px;
+	color: var(--text-grey);
 }
-#textBox textarea {
-	resize: none
+#writeMsg textarea{
+	resize: none !important;
+	outline: none;
+	overflow: hidden;
 }
-#skickaKnapp {
+#msgButtons {
 	float: right;
-	margin: 5% auto;
+	margin-right: 104px;
+	margin-top: 10px;
 }
-#avbrytKnapp {
-	float: right;
-	margin: 25px 20px;
+#msgButtons button {
+	margin-right: 20px;
 }
