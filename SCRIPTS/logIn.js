@@ -21,6 +21,8 @@ function logIn() {
 	for (var i = 0; i <= uid.length; i++) {
 		if ($("#uid").val().toUpperCase() == uid[i] && $("#pswrd").val() == pswrd[i]) {
 			localStorage.setItem("access", "true");
+			notificationAmount = Math.ceil(Math.random() * 10);
+			localStorage.setItem("msgNumber", notificationAmount);
 			window.location.replace("hem.html");
 			localStorage.setItem("uid", i);
 			break;
