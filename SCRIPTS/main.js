@@ -72,6 +72,19 @@ $(document).ready(function() {
 	// Hides all kureser cards
 	$("#kurser").children("#container").children(".card").hide();
 });
+//Visar namn på vald fil
+$("#file").change(function(){
+	var fileName = $("#file").val().substring(12);
+	$("#fileName").text(fileName);
+});
+// Skicka in uppgiften
+$("#lammnaIn").find("button").click(function(){
+	var fileName = $("#file").val().substring(12);
+	var lammnaInTitle = (window.location.hash).replace("#", "").replace("%C3%A4", "ä");
+	alert("Du har lämmnat in " + '"' + fileName + '"' + " i uppgiften " + '"' + lammnaInTitle + '"');
+	location.href = "uppgifter.html";
+});
+
 $("#kurser").find("button").click(function(){
 	$(this).toggleClass("greenCheck");
 	var activeCard = "#" + $(this).prev().text();

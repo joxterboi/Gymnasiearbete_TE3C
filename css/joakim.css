@@ -82,12 +82,19 @@
 	border-radius: 20px;
 	font-size: 15px;
 	position: relative;
-	left: 36%;
+	left: 25%;
 }
 #lammnaIn button{
 	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
+	margin-top: -44px;
+	left: 55%;
+}
+#fileName {
+	color: var(--green);
+	position: relative;
+	left: 27%;
+	font-size: 13px;
+	margin-top: -9px;
 }
 /*Frånvaro*/
 #franvaroRapport #container {
