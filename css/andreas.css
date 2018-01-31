@@ -67,9 +67,12 @@
 	margin: 50px auto;
 }
 #textInput {
-	margin: 25px auto 0 -6px;
+	margin: 25px  0 -6px;
 	border-bottom: 1px solid black;
 	padding-bottom:1px;
+}
+#textBox {
+	margin-top: 5%;
 }
 #skickaKnapp {
 	float: right;
