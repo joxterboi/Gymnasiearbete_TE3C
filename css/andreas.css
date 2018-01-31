@@ -61,3 +61,21 @@
 	text-decoration: none;
 	color: var(--pink);
 }
+/*Svara sidan*/
+#svaraMsg {
+	width: 360px;
+	margin: 50px auto;
+}
+#textInput {
+	margin: 25px auto 0 -6px;
+	border-bottom: 1px solid black;
+	padding-bottom:1px;
+}
+#skickaKnapp {
+	float: right;
+	margin: 5% auto;
+}
+#avbrytKnapp {
+	float: right;
+	margin: 25px 20px;
+}
