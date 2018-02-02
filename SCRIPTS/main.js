@@ -72,6 +72,21 @@ $(document).ready(function() {
 	showAbsence();
 	// Hides all kureser cards
 	$("#kurser").children("#container").children(".card").hide();
+
+	//SCHEMA
+	// var block = $(".block");
+	// block.css("margin-top", $(this).find("h1").html())
+		for (var i = 1; i < 3; i++) {
+			var h1Text = $(".block:nth-child(" + i + ")").find("h1").html();
+			$(".block:nth-child(" + i + ")").css("height", h1Text);
+			$(".block:nth-child(" + i + ")").find("h1").html("");
+		}
+
+
+
+
+
+
 });
 // Avbryter svara på msg, skickas tillbaka
 $("#msgButtons").find("#avbrytKnapp").click(function(){
