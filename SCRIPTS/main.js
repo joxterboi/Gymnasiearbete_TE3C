@@ -74,19 +74,12 @@ $(document).ready(function() {
 	$("#kurser").children("#container").children(".card").hide();
 
 	//SCHEMA
-	// var block = $(".block");
-	// block.css("margin-top", $(this).find("h1").html())
 		for (var i = 1; i < 3; i++) {
-			var h1Text = $(".block:nth-child(" + i + ")").find("h1").html();
-			$(".block:nth-child(" + i + ")").css("height", h1Text);
-			$(".block:nth-child(" + i + ")").find("h1").html("");
+			var h1Text = $("#day1").find(".block:nth-child(" + i + ")").find("h1").html();
+			$("#day1").find(".block:nth-child(" + i + ")").css("height", h1Text);
+			$("#day1").find(".block:nth-child(" + i + ")").find("h1").html("");
+			console.log( $(".block:nth-child(" + i + ")").html() )
 		}
-
-
-
-
-
-
 });
 // Avbryter svara på msg, skickas tillbaka
 $("#msgButtons").find("#avbrytKnapp").click(function(){
