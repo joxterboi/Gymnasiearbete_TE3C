@@ -74,12 +74,14 @@ $(document).ready(function() {
 	$("#kurser").children("#container").children(".card").hide();
 
 	//SCHEMA
-		for (var i = 1; i < 3; i++) {
-			var h1Text = $("#day1").find(".block:nth-child(" + i + ")").find("h1").html();
-			$("#day1").find(".block:nth-child(" + i + ")").css("height", h1Text);
-			$("#day1").find(".block:nth-child(" + i + ")").find("h1").html("");
-			console.log( $(".block:nth-child(" + i + ")").html() )
+	for (var i = 1; i < 6; i++) {
+		for (var o = 1; o < $("#day" + i + " .block").length + 1; o++) {
+			for (var p = 1; p < 7; p++) {				
+				var info1 = $("#day" + i + " .block:nth-child(" + o + ")").children("h" + p).html();
+				console.log(info1);
+			}
 		}
+	}
 });
 // Avbryter svara på msg, skickas tillbaka
 $("#msgButtons").find("#avbrytKnapp").click(function(){
