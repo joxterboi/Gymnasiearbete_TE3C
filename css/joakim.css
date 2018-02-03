@@ -215,10 +215,14 @@
 }
 #mainContainerSchema .day {
 	width: 18%;
-	border:1px solid red;
+	border:1px solid rgba(0,0,0,0.5);
+	border-left: none;
 	display: inline-block;
 	height: 100%;
-	border:1px solid blue;
+	margin:0 -2px;
+}
+#mainContainerSchema .day:first-child {
+	border-left:1px solid rgba(0,0,0,0.5);
 }
 .block {
 	float: left;
@@ -228,8 +232,44 @@
 	transform: translateX(-50%);
 	width: 100%;
 	background-color: lightblue;
-	border: 1px solid red;
 }
 #schemaBlocks {
 	height: calc(100% - 105px);
+}
+#schemaBlocks .day .block h3 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 15px;
+	font-weight: 300;
+	color: var(--text-grey);
+	padding: 2px;
+	background-color: #fff;
+	opacity: 1;
+}
+#schemaBlocks .day .block h4 {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 15px;
+	font-weight: 300;
+	color: var(--text-grey);
+	padding: 2px;
+	background-color: #fff;
+	opacity: 1;
+}
+#schemaBlocks .day .block h5 span {
+	margin: 0 auto;
+	display: flex;
+}
+#schemaBlocks .day .block h5 {
+	color:#fff;
+	font-weight: 300;
+	font-size: 15px;
+	position: absolute;
+	display: flex;
+	width: 80%;
+	margin-left: 10%;
+	top: 50%;
+	transform: translateY(-50%);
 }

@@ -77,12 +77,25 @@ $(document).ready(function() {
 	for (var i = 1; i < 6; i++) {
 		for (var o = 1; o < $("#day" + i + " .block").length + 1; o++) {
 			for (var p = 1; p < 7; p++) {				
-				var info1 = $("#day" + i + " .block:nth-child(" + o + ")").children("h" + p).html();
-				console.log(info1);
+				var info = $("#day" + i + " .block:nth-child(" + o + ")").children("h" + p).html();
+				var activeBlock = $("#day" + i + " .block:nth-child(" + o + ")");
+				if (p === 1) {
+					activeBlock.css("margin-top", info);
+				} else if (p === 2) {
+					activeBlock.css("height", info);
+					activeBlock.children("h1").html("");
+					activeBlock.children("h2").html("");
+				} else if (p === 6) {
+					activeBlock.css("background-color", info);
+					activeBlock.children("h6").html("");
+				}
 			}
 		}
 	}
 });
+function clearMetaData() {
+	
+}
 // Avbryter svara på msg, skickas tillbaka
 $("#msgButtons").find("#avbrytKnapp").click(function(){
 	location.href = "kontakt.html#meddelanden";
