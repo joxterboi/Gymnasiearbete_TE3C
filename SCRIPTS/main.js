@@ -72,27 +72,35 @@ $(document).ready(function() {
 	showAbsence();
 	// Hides all kureser cards
 	$("#kurser").children("#container").children(".card").hide();
-
 	//SCHEMA
+	schemaResize();
+		$(window).resize(function() {
+			schemaResize();
+		});
+});
+function schemaResize() {	
+			var schemaHeight = document.body.clientHeight - 318;
+			var schemaWidth = $("#day1").width() * 5 + 8;
+			var schemaAspect = schemaHeight / schemaWidth;
 	for (var i = 1; i < 6; i++) {
 		for (var o = 1; o < $("#day" + i + " .block").length + 1; o++) {
 			for (var p = 1; p < 7; p++) {				
 				var info = $("#day" + i + " .block:nth-child(" + o + ")").children("h" + p).html();
 				var activeBlock = $("#day" + i + " .block:nth-child(" + o + ")");
 				if (p === 1) {
-					activeBlock.css("margin-top", info);
+					activeBlock.css("margin-top", info * schemaAspect * 5 + "%");
 				} else if (p === 2) {
 					activeBlock.css("height", info);
-					activeBlock.children("h1").html("");
-					activeBlock.children("h2").html("");
+					activeBlock.children("h1").hide();
+					activeBlock.children("h2").hide();
 				} else if (p === 6) {
 					activeBlock.css("background-color", info);
-					activeBlock.children("h6").html("");
+					activeBlock.children("h6").hide();
 				}
 			}
 		}
 	}
-});
+}
 function clearMetaData() {
 	
 }
