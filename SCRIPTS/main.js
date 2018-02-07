@@ -72,15 +72,17 @@ $(document).ready(function() {
 	showAbsence();
 	// Hides all kureser cards
 	$("#kurser").children("#container").children(".card").hide();
-
 	//SCHEMA
 	for (var i = 1; i < 6; i++) {
 		for (var o = 1; o < $("#day" + i + " .block").length + 1; o++) {
-			for (var p = 1; p < 7; p++) {				
+			for (var p = 1; p < 7; p++) {
+					console.log("Height: " + $("#schemaBlocks").height());
 				var info = $("#day" + i + " .block:nth-child(" + o + ")").children("h" + p).html();
 				var activeBlock = $("#day" + i + " .block:nth-child(" + o + ")");
-				if (p === 1) {
-					activeBlock.css("margin-top", info);
+				var marginTop = $("#schemaBlocks").css("width") / $("#schemaBlocks").css("height");
+				if (p === 1){
+					activeBlock.css("marginTop",  info * marginTop + "%");
+					// console.log("Ratio: " + marginTop);
 				} else if (p === 2) {
 					activeBlock.css("height", info);
 					activeBlock.children("h1").html("");
@@ -92,6 +94,7 @@ $(document).ready(function() {
 			}
 		}
 	}
+	console.log($("body").css("height"));
 });
 function clearMetaData() {
 	
