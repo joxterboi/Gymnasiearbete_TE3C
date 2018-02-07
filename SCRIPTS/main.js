@@ -49,13 +49,15 @@ $(document).ready(function() {
 	} else {
 			$("#msgNumber").hide();
 	}
-	// Looks for url to go to msg directly
-	var hash = (window.location.hash).replace("#","");
-	if (hash == "meddelanden") {
+	// Looks at hash to see what to do with under menu
+	// Looks for url to go to right tab direclty
+	var hash = (window.location.hash);
+	var underMenuContent = "#" + hash.slice(2);
+	if (hash) {
 		$(".underMenuItems").children().hide();
-		$("#meddelanden").show();
-		$('button[value="meddelanden"]').addClass("active");
-		$('button[value="dinaLarare"]').removeClass("active");
+		$(underMenuContent).show();
+		$('button').removeClass("active");
+		$('button[value=' + hash.replace("#", "") + ']').addClass("active");
 	}
 	// Hides klara uppgifter
 	$(".done").hide();
@@ -65,11 +67,11 @@ $(document).ready(function() {
 		localStorage.setItem("prevAbsence", "true");
 		localStorage.setItem("absenceAmount", 0);
 	}
+	// View repported absence
+	showAbsence();
 	// Lämmna in en uppgift title och uppgift
 	var lammnaInTitle = (window.location.hash).replace("#", "").replace("%C3%A4", "ä");
 	$("#lammnaInTitle").text(lammnaInTitle);
-	// View repported absence
-	showAbsence();
 	// Hides all kureser cards
 	$("#kurser").children("#container").children(".card").hide();
 	//SCHEMA
@@ -78,6 +80,10 @@ $(document).ready(function() {
 			schemaResize();
 		});
 });
+// END OF AUTO RUN CODE
+// 
+// 
+// 
 function schemaResize() {	
 			var schemaHeight = document.body.clientHeight - 318;
 			var schemaWidth = $("#day1").width() * 5 + 8;
@@ -139,7 +145,7 @@ function checkt() {
 $(".underMenu").find("button").click(function() {	
 	$(".underMenu").find("button").removeClass("active");
 	$(this).toggleClass("active");
-	var goTo = "#" + $(this).val();
+	var goTo = "#" + $(this).val().slice(1);
 	$(".underMenuItems").children().hide();
 	$(goTo).show();
 });
