@@ -85,18 +85,10 @@ function schemaResize() {
 	for (var i = 1; i < 6; i++) {
 		for (var o = 1; o < $("#day" + i + " .block").length + 1; o++) {
 			for (var p = 1; p < 7; p++) {
-					console.log("Height: " + $("#schemaBlocks").height());
 				var info = $("#day" + i + " .block:nth-child(" + o + ")").children("h" + p).html();
 				var activeBlock = $("#day" + i + " .block:nth-child(" + o + ")");
-<<<<<<< HEAD
-				var marginTop = $("#schemaBlocks").css("width") / $("#schemaBlocks").css("height");
-				if (p === 1){
-					activeBlock.css("marginTop",  info * marginTop + "%");
-					// console.log("Ratio: " + marginTop);
-=======
 				if (p === 1) {
 					activeBlock.css("margin-top", info * schemaAspect * 5 + "%");
->>>>>>> bbfe795a777d46b197232284537f92961ee08b16
 				} else if (p === 2) {
 					activeBlock.css("height", info);
 					activeBlock.children("h1").hide();
@@ -108,12 +100,7 @@ function schemaResize() {
 			}
 		}
 	}
-<<<<<<< HEAD
-	console.log($("body").css("height"));
-});
-=======
 }
->>>>>>> bbfe795a777d46b197232284537f92961ee08b16
 function clearMetaData() {
 	
 }
@@ -142,7 +129,6 @@ $("#kurser").find("button").click(function(){
 	var activeCard = "#" + $(this).prev().text();
 	activeCard = activeCard.replace(/ä/g, "");
 	activeCard = activeCard.replace(/\s/g,"");
-	console.log(activeCard);
 	$(activeCard).toggle();
 });
 // Checkbox background change
