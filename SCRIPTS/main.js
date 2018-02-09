@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	setTimeout(function () {
+		schemaResize();
+	}, 80);
 	favicon = document.createElement('link');
     favicon.setAttribute('rel', 'shortcut icon');
     var head = document.querySelector('head');
