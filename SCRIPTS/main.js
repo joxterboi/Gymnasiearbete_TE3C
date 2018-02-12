@@ -34,6 +34,13 @@ $(document).ready(function() {
 	var currentUserId = localStorage.getItem("uid");
 	var currentUser = userDb[currentUserId];
 	$("#userUpper").text(currentUser);
+	// Sets var "currentDate" to current date for use on multiple pages
+	var currentDate = new Date();
+	var currentMonth = currentDate.getMonth()+1;
+	var currentDay = currentDate.getDay();
+	console.log(currentDate);
+	console.log(currentMonth);
+	console.log(currentDay);
 	//Sätter rätt title på svara på msg
 	var msgTitle = (window.location.hash).replace("#", "").replace("%C3%A4", "ä").replace("%C3%B6", "ö");
 	$("#writeMsg").find("h1").text("Svara på " + '"' + msgTitle + '"');
