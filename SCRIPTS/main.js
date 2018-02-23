@@ -30,7 +30,7 @@ $(document).ready(function() {
 		}
 	}
 	// Sets profile name to logged in user
-	var userDb = ["Joakim Kjellander Te3C", "Hektor Byfors Te3C", "Andreas Eriksson Te3C"]
+	var userDb = ["Joakim Kjellander Te3C", "Hektor Byfors Te3C", "Andreas Eriksson Te3C", "Guest user"]
 	var currentUserId = localStorage.getItem("uid");
 	var currentUser = userDb[currentUserId];
 	$("#userUpper").text(currentUser);
@@ -232,7 +232,7 @@ $(".chkUppgift").click(function() {
 // Look at MSG
 function notis() {
 	localStorage.setItem("msgNumber", 0);
-	location.href=("kontakt.html#meddelanden");
+	location.href=("kontakt.html#Bmeddelanden");
 	$("#msgNumber").hide();
 };
 //"Sends" msg
