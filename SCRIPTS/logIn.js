@@ -16,8 +16,8 @@ $(document).ready(function() {
 	});
 });
 function logIn() {
-	var uid = ["JOKJE001", "HEBYF001", "ANERI023"];
-	var pswrd = ["123", "456", "789"];
+	var uid = ["JOKJE001", "HEBYF001", "ANERI023", "guest"];
+	var pswrd = ["123", "456", "789", "rip"];
 	for (var i = 0; i <= uid.length; i++) {
 		if ($("#uid").val().toUpperCase() == uid[i] && $("#pswrd").val() == pswrd[i]) {
 			localStorage.setItem("access", "true");
